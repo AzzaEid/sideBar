@@ -1,0 +1,73 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.layer{
+ margin: auto;
+background-color:  rgba(110, 64, 141, 0.414);
+ width: 100%;
+ height: 100vh;
+  z-index: 5;
+  opacity: 0;
+  transform: all 500ms ease-in-out;
+}
+.layer.active{
+    opacity: 50%;
+    z-index: 5;
+}
+.sidebar{
+    z-index: 9;
+    position: fixed;
+    top: 0px;
+    left: -250px;
+    width: 250px;
+    height:100%;
+    background: rgb(255, 255, 255);
+    transform: all 500ms ease-in-out;
+}
+.sidebar .toggle-btn{
+    position: absolute;
+    top: 10px;
+    right: -44px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.sidebar.active{
+    left: 0px;
+}
+
+.sidebar .toggle-btn span{
+    position: absolute
+}
+.sidebar .toggle-btn span:nth-child(2){
+    display: none;
+}
+.sidebar.active .toggle-btn span:nth-child(2){
+    display:block;
+}
+.sidebar.active .toggle-btn span:nth-child(1){
+    display: none;
+}
+.sidebar .toggle-btn span:nth-child(1){
+    display: block;
+} 
+.sidebar .nav .line{
+    display: flex;
+    gap: 3px;
+    padding: 15px 10px ;
+    color:blueviolet;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid gainsboro;
+
+}
+.sidebar .nav a{
+   text-decoration: none;
+   color: black;
+    cursor: pointer;
+
+}
+
